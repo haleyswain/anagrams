@@ -1,7 +1,7 @@
 class String
   define_method(:anagrams) do |guess|
-    word_array = self.split("")
-    guess_array = guess.split("")
+    word_array = self.delete(" ").split("")
+    guess_array = guess.delete(" ").split("")
 
     if word_array.sort == guess_array.sort
       guess + " is an anagram of " + self
